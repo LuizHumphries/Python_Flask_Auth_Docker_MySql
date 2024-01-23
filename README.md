@@ -1,1 +1,3 @@
-# Python_Flask_CRUD_auth_advanced
+# Python_Flask_Auth
+
+Auth API with a database conection
