@@ -3,12 +3,14 @@ from flask_login import LoginManager, login_user, current_user, logout_user, log
 from models.user import User
 from database import db
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "your_secret_key"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:admin@127.0.0.1:3306/flask-crud"
 
 
 db.init_app(app)
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'

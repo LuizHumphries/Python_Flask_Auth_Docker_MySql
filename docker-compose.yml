@@ -1,0 +1,18 @@
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: flask-crud
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: user
+      MYSQL_PASSWORD: admin
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    volumes:
+      - C:/Programing Study/Python/RocketSeat/mysql:/var/lib/mysql
+
+
+    
